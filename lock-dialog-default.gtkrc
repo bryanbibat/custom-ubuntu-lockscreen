@@ -1,0 +1,25 @@
+
+style "window"
+{
+	#This has to be back to not disturb the eye 
+	# when loading images on slower PC's
+	bg[NORMAL] = "Black"
+
+#FILE NAME OF BACKGROUND IMAGE -- 
+	engine "pixmap" {
+		image {
+			file = "demian.png"
+			function = FLAT_BOX
+			stretch = TRUE
+			border = { 0, 0, 0, 0 } 
+		}
+	}
+}
+style "label"
+{
+  fg[NORMAL] = "White"
+  fg[ACTIVE] = "White"
+  fg[PRELIGHT] = "White"
+}
+class "GtkWindow" style "window"
+widget "*auth-prompt-label" style "label"
